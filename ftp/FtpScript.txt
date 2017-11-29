@@ -1,0 +1,4 @@
+cd /path/to/targetdir
+dir > aa.txt
+
+bye

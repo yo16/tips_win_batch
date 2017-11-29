@@ -1,0 +1,7 @@
+cd path
+cd to
+cd targetDir
+prompt
+mget aiu*
+
+bye
