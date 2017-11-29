@@ -1,0 +1,3 @@
+dir | findstr "のディレクトリ"
+
+pause
