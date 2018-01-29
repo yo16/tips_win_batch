@@ -88,7 +88,7 @@ rem 12:Ä‹A“I‚ÉŒÄ‚Ño‚³‚ê‚½ƒvƒƒZƒX‚ÅA"Mandatory Label\High Mandatory Level"ƒOƒ
 		
 		rem "%1" == "%RUN_AS_ADMIN_FRAG%"‚Ìê‡‚ÍA
 		rem powershell‚ÅÀs‚³‚ê‚Ä‚¢‚é‚Ì‚ÉAADMIN=yes‚Å‚È‚¢‚Ì‚ÅAƒGƒ‰[ƒR[ƒh‚ğ•Ô‚·
-		set RUN_AS_ADMIN_RET=2
+		set RUN_AS_ADMIN_RET=11
 		goto RunAsAdmin_exit
 	)
 	rem ELEVATED=yes‚Å‚È‚¯‚ê‚Î‚È‚ç‚È‚¢iƒvƒƒZƒX‚Ì–â‘èj
@@ -101,7 +101,7 @@ rem 12:Ä‹A“I‚ÉŒÄ‚Ño‚³‚ê‚½ƒvƒƒZƒX‚ÅA"Mandatory Label\High Mandatory Level"ƒOƒ
 		
 		rem "%1" == "%RUN_AS_ADMIN_FRAG%"‚Ìê‡‚ÍA
 		rem powershell‚ÅÀs‚³‚ê‚Ä‚¢‚é‚Ì‚ÉAELEVATED=yes‚Å‚È‚¢‚Ì‚ÅAƒGƒ‰[ƒR[ƒh‚ğ•Ô‚·
-		set RUN_AS_ADMIN_RET=3
+		set RUN_AS_ADMIN_RET=12
 		goto RunAsAdmin_exit
 	)
 	
