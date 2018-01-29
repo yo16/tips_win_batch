@@ -1,6 +1,6 @@
 @echo off
 
-rem http://www.atmarkit.co.jp/ait/articles/1002/05/news097.html
+rem https://qiita.com/jTakasuRyuji/items/e7bd576ed57969b2d06e
 
 
 REM HINT=http://qiita.com/usagi/items/2623145f22faf54b99e0
@@ -39,5 +39,7 @@ REM ▲管理者として実行されているか確認 END
 :runas
     REM ★管理者として再実行
     powershell -Command Start-Process -Verb runas "%0" -ArgumentList "/R" 
+    echo %ERRORLEVEL%
 
 :exit1
+pause
