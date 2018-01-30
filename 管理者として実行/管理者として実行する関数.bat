@@ -48,6 +48,7 @@ rem   ‚±‚ÌƒvƒƒZƒX©‘Ì‚Í”ñŠÇ—ÒB
 rem   Ä‹A“I‚ÉŒÄ‚Ño‚µ‚½ˆ—‚ÌŒ‹‰Ê‚ÍA‚±‚ÌƒvƒƒZƒX‚ÍŠÖ—^‚µ‚È‚¢B
 rem 11:Ä‹A“I‚ÉŒÄ‚Ño‚³‚ê‚½ƒvƒƒZƒX‚ÅA"BUILTIN\Administrators"ƒOƒ‹[ƒv‚Å‚È‚¢‚½‚ßAˆÙíI—¹B
 rem 12:Ä‹A“I‚ÉŒÄ‚Ño‚³‚ê‚½ƒvƒƒZƒX‚ÅA"Mandatory Label\High Mandatory Level"ƒOƒ‹[ƒv‚Å‚È‚¢‚½‚ßAˆÙíI—¹B
+rem 13:Ä‹A“I‚ÉŒÄ‚Ño‚»‚¤‚Æ‚µ‚½‚Æ‚±‚ëAŠÇ—Ò‚Æ‚µ‚ÄÀs‚µ‚È‚¢‚ª‘I‚Î‚ê‚½B
 :RunAsAdmin
 	rem ˆø”‚Ì®—
 	rem “–ŠÖ”‚É‚ÍAƒƒCƒ“ŠÖ”‚Ì%0‚ª“–ŠÖ”‚Ì%1‚ÖA%1‚ª%2‚ÖEEE‚Æİ’è‚³‚ê‚Ä‚¢‚éB
@@ -118,6 +119,12 @@ rem 12:Ä‹A“I‚ÉŒÄ‚Ño‚³‚ê‚½ƒvƒƒZƒX‚ÅA"Mandatory Label\High Mandatory Level"ƒOƒ
 	rem ‘æˆêˆø”‚É%RUN_AS_ADMIN_FRAG%‚ğ“ü‚ê‚é
 :RunAsAdmin_runas
 	powershell -Command Start-Process -Verb runas '%ORIGINAL_PATH%' -ArgumentList '%RUN_AS_ADMIN_FRAG% %ORIGINAL_PARAMS%'
+	if ERRORLEVEL 1 (
+		rem ŠÇ—Ò‚Æ‚µ‚ÄÀs‚µ‚È‚¢‚ª‘I‚Î‚ê‚½
+		set RUN_AS_ADMIN_RET=13
+		goto RunAsAdmin_exit
+	)
+	
 	rem ‚±‚ÌƒvƒƒZƒX‚Å‚ÍAÀs‚µ‚È‚¢‚Ì‚ÅƒGƒ‰[‚ğ•Ô‚·
 	set RUN_AS_ADMIN_RET=2
 	
