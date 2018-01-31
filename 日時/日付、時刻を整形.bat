@@ -9,7 +9,7 @@ echo %DT%
 set TM=%TIME%
 set TM=%TM::=%
 set TM=%TM: =0%
-set TM=%TM:~0,4%
+set TM=%TM:~0,6%
 
 echo %TM%
 
